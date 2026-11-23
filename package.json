@@ -1,0 +1,5 @@
+{
+  "name": "resolve-ai",
+  "private": true,
+  "scripts": {"serve": "firebase emulators:start", "deploy": "firebase deploy"}
+}

@@ -1,0 +1,14 @@
+{
+  "functions": [{ "source": "functions", "runtime": "nodejs20" }],
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      { "source": "**/*.@(js|css|webmanifest)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+    ],
+    "rewrites": [
+      { "source": "/api/investigate", "function": { "functionId": "investigate", "region": "us-central1" } }
+    ]
+  },
+  "firestore": { "rules": "firestore.rules" }
+}
